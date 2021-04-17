@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+
+
+
+#header{}
+
+.hTop{
+    height: 40px;
+    background: #52131a;
+    position: relative;
+}
+.hTop h1{
+    width: 120px;
+    height: 100%;
+    line-height: 40px; /*정렬*/
+    margin: 0 auto;
+}
+.hTop h1 a{}   /*a한테 블락을 줄거면 무조건 h1한테 사이즈를 주야한다*/
+.hTop h1 img{
+    width: 100%;
+    display: block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.panel1{
+    width: 40px;    /*푸터탑 위드와 헤이트가 40px이니까*/    
+    height: 40px;
+    
+    position: absolute;    /*어차피 위치가 맨위오른쪽이라서 렐라티브 안줘도 됩니다*/
+    top:0;
+    right: 0;
+    z-index: 1;
+    
+}
+.panel1 a::before,.panel1 span,.panel1 a::after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 3px;
+    background: black;
+    margin: 0 auto;
+}
+.panel1 a{
+    display: block;
+    padding: 12px 0;       /*40px에*/
+}
+
+.panel1 span{
+    margin: 5px auto;  /*auto부분을 0으로 적으면 블락 정렬이 안먹혀서 auto로 주자*/
+    text-indent: -9999px; /*판넬한테주면a태그도 날아가버리니까 직접 스판한테 주기*/
+}
+
+
+/*footer*/
+
+#footer{
+    background: #fff;
+    width: 100%;
+    height: 150px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin-top: 40px;
+    text-align: center;
+}
+.fLogo{
+    padding: 10px;
+}
+.fLogo img{
+    width: 30%;
+    
+}
+
+.fCiiki{
+    display: inline-block;
+   padding: 10px;
+}
+.fCiiki li{
+    float: left;
+    margin-right: 10px;
+    
+}
+.fCiiki li a{}
+.fCiiki li a img{
+    width: 80%;
+}
+
+.snsImg{
+    display:inline-block;
+}
+.snsImg li{
+    float: left;
+    margin-right: 10px;
+}
+.snsImg li a{}
+.snsImg li a img{
+    width: 80%;
+}
+
+#footer p{
+    font-size: 10px;
+}
